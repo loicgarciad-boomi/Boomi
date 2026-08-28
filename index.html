@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Boomi</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #17143b;
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .phone {
+        width: 390px;
+        min-height: 844px;
+        background: linear-gradient(180deg, #302875, #17143b);
+        border-radius: 30px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        text-align: center;
+        padding: 45px 25px;
+    }
+
+    .logo {
+        font-size: 38px;
+        font-weight: bold;
+        margin-bottom: 35px;
+    }
+
+    .koala {
+        font-size: 120px;
+        margin: 25px 0;
+        animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 10px 0;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.5;
+        opacity: 0.9;
+    }
+
+    input {
+        width: 100%;
+        padding: 16px;
+        border: none;
+        border-radius: 14px;
+        font-size: 18px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    button {
+        border: none;
+        border-radius: 15px;
+        padding: 16px 30px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        background: #ffffff;
+        color: #17143b;
+        margin-top: 15px;
+    }
+
+    button:hover {
+        transform: scale(1.04);
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .stage {
+        margin-top: 25px;
+        background: rgba(255,255,255,0.12);
+        border-radius: 20px;
+        padding: 25px 10px;
+    }
+
+    .avatar {
+        font-size: 110px;
+        margin: 20px;
+    }
+
+    .dance {
+        animation: dance 0.5s infinite alternate;
+    }
+
+    @keyframes dance {
+        from { transform: rotate(-8deg) translateY(0); }
+        to { transform: rotate(8deg) translateY(-12px); }
+    }
+
+    .action-buttons button {
+        margin: 6px;
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+
+    .message {
+        min-height: 55px;
+        margin-top: 15px;
+        font-size: 17px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+
+    <!-- ÉCRAN 1 -->
+    <div id="welcome">
+
+        <div class="logo">BOOMI</div>
+
+        <div class="koala">🐨</div>
+
+        <h1>Bienvenue dans Boomi !</h1>
+
+        <p>
+            Salut ! Moi c'est Koko.<br>
+            Je suis ton animateur aujourd'hui.
+        </p>
+
+        <p>
+            Prépare-toi à bien rigoler 😄
+        </p>
+
+        <button onclick="showNameScreen()">
+            COMMENCER
+        </button>
+
+    </div>
+
+
+    <!-- ÉCRAN 2 -->
+    <div id="nameScreen" class="hidden">
+
+        <div class="logo">BOOMI</div>
+
+        <div class="koala">🐨</div>
+
+        <h1>Avant de commencer...</h1>
+
+        <p>Koko a besoin de connaître ton nom !</p>
+
+        <input
+            id="playerName"
+            type="text"
+            placeholder="Ton prénom ou ton surnom"
+        >
+
+        <button onclick="enterStage()">
+            CONTINUER
+        </button>
+
+    </div>
+
+
+    <!-- ÉCRAN 3 -->
+    <div id="stageScreen" class="hidden">
+
+        <div class="logo">BOOMI 🎬</div>
+
+        <div class="stage">
+
+            <div class="koala">🐨</div>
+
+            <h2 id="hello"></h2>
+
+            <p>
+                Bienvenue sur le plateau !
+            </p>
+
+            <div id="avatar" class="avatar">
+                🧑
+            </div>
+
+            <div class="message" id="message">
+                Koko t'attend...
+            </div>
+
+            <div class="action-buttons">
+
+                <button onclick="dance()">
+                    🕺 Danser
+                </button>
+
+                <button onclick="wave()">
+                    👋 Saluer
+                </button>
+
+                <button onclick="laugh()">
+                    😂 Rigoler
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function showNameScreen() {
+
+    document.getElementById("welcome").classList.add("hidden");
+
+    document.getElementById("nameScreen").classList.remove("hidden");
+
+}
+
+
+function enterStage() {
+
+    let name = document.getElementById("playerName").value;
+
+    if (name.trim() === "") {
+
+        name = "Invité";
+
+    }
+
+    document.getElementById("nameScreen").classList.add("hidden");
+
+    document.getElementById("stageScreen").classList.remove("hidden");
+
+    document.getElementById("hello").innerText =
+        "Bienvenue " + name + " !";
+
+}
+
+
+function dance() {
+
+    let avatar = document.getElementById("avatar");
+
+    avatar.innerText = "🕺";
+
+    avatar.classList.add("dance");
+
+    document.getElementById("message").innerText =
+        "Koko : Je vois que " +
+        document.getElementById("playerName").value +
+        " est à la pointe de la technologie ! 🤖";
+
+}
+
+
+function wave() {
+
+    let avatar = document.getElementById("avatar");
+
+    avatar.innerText = "👋";
+
+    avatar.classList.remove("dance");
+
+    document.getElementById("message").innerText =
+        "Koko : Quel magnifique salut ! 👋";
+
+}
+
+
+function laugh() {
+
+    let avatar = document.getElementById("avatar");
+
+    avatar.innerText = "😂";
+
+    avatar.classList.remove("dance");
+
+    document.getElementById("message").innerText =
+        "Koko : Voilà une personne qui sait mettre l'ambiance ! 😂";
+
+}
+
+</script>
+
+</body>
+</html>
