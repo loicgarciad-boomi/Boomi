@@ -1,0 +1,7 @@
+Koko utilise le modèle 3D « 19_Koa_m » créé par mgruosso.
+
+Source : https://sketchfab.com/3d-models/19-koa-m-e2467c67ba8d4147bf176ad823840669
+Licence : Creative Commons Attribution 4.0 International (CC BY 4.0)
+Licence : https://creativecommons.org/licenses/by/4.0/
+
+Modifications pour BOOMi V1 : conversion au format GLB, intégration au jeu et animations procédurales simples.
