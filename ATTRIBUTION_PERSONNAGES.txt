@@ -1,0 +1,19 @@
+BOOMi V1 — Crédits des modèles 3D
+=================================
+
+Les modèles ci-dessous sont utilisés sous licence Creative Commons Attribution 4.0 (CC BY 4.0).
+
+Koko : « 19_Koa_m » par mgruosso
+https://sketchfab.com/3d-models/19-koa-m-e2467c67ba8d4147bf176ad823840669
+
+Rosie : « Rosie Rigged Cartoon Girl Character » par AaronNg
+
+Mamie cartoon : « Cartoon Old Woman » par frkndgr
+
+Pirate : « Low Poly Stylize Pirate » par Caner.Kahya
+
+Pip le moineau : « Sparrow - Quirky Series » par Omabuarts Studio
+
+Licence CC BY 4.0 : https://creativecommons.org/licenses/by/4.0/
+
+Les animations procédurales, l’intégration et l’interface BOOMi V1 ont été adaptées pour ce prototype.

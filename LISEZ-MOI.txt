@@ -1,0 +1,24 @@
+BOOMi V1 — Installation rapide
+==============================
+
+Contenu de cette version
+------------------------
+- 2 à 4 joueurs maximum
+- 4 personnages au choix : Rosie, Mamie cartoon, Pirate et Pip le moineau
+- Koko intégré et animé
+- 3 défis avec mouvements et réactions
+- Mode « Tester la V1 en solo » pour vérifier rapidement le jeu
+
+Publication sur GitHub Pages
+----------------------------
+1. Ouvrir le dépôt GitHub utilisé pour BOOMi.
+2. Remplacer les anciens fichiers du site par tous les fichiers de ce dossier.
+3. Vérifier que index.html et les fichiers .glb sont bien à la racine du dépôt.
+4. Attendre une à deux minutes.
+5. Ouvrir le site puis faire Ctrl + F5 pour forcer l’actualisation.
+
+Important
+---------
+Ne pas ouvrir index.html directement depuis le dossier Windows : les modèles 3D doivent être servis par GitHub Pages ou un serveur local.
+
+Cette version est un prototype gratuit destiné à valider le fonctionnement et l’ambiance du jeu. Les personnages personnalisés et les animations faciales avancées pourront être ajoutés dans une version ultérieure.
